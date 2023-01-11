@@ -1,0 +1,32 @@
+GET http://localhost:5555/immos
+###
+GET http://localhost:5555/immos/2
+###
+GET http://localhost:5555/immos?city=Vienna
+###
+GET http://localhost:5555/immos?priceLT=5000000
+###
+GET http://localhost:5555/immos?city=London&priceLT=5000000
+###
+DELETE http://localhost:5555/immos/
+###
+DELETE http://localhost:5555/immos/2
+###
+POST http://localhost:5555/immos/
+Content-Type: application/json
+
+{
+"title": "College for higher vocational education, Thaliastraße",
+"postCode": "1160",
+"city": "Vienna",
+"country": "Austria",
+"price": 14358321
+}
+###
+PATCH http://127.0.0.1:3000/immos/11
+Content-Type: application/json
+
+{
+"title": "College for higher vocational education HTL Wien West, Thaliastraße",
+"price": 0
+}
